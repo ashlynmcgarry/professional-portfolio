@@ -1,0 +1,259 @@
+/* Universal element styling */
+* {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+:root {
+    --white: #eae4d6; 
+    --black: #16160f;
+    --light-green: #d6ca51;
+    --dark-green: #596020;
+    --pink: #B65767;
+}
+
+.row {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h4 {
+    justify-content: space-around;
+    font-size: 45px;
+    text-decoration: underline;
+    font-weight: bolder;
+    color: var(--white);
+    padding: 15px 0 10px 0;
+}
+
+/* Header section */
+.header-row {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;   
+    align-items: center;
+    align-content: space-around;
+    padding: 15px;
+}
+
+header {
+    text-align: center;
+    background-color: var(--dark-green);
+}
+
+h1 {
+    font-size: 60px;
+    color: var(--white)
+}
+
+.navigation-links {
+    display: flex;
+    flex-grow: 1;
+    justify-content: right;
+    padding-left: 30px;
+}
+
+ul {
+    display: inline;
+    list-style-type: none;
+    padding: 15px 0 5px 0;
+}
+
+ul, li {
+    display: inline-block;
+    text-align: center;
+}
+
+li {
+    padding: 0 20px 0 20px;
+}
+
+a:link {
+    color: var(--black);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--black);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--light-green);
+    text-decoration: none;
+}
+
+@media (width < 450px) {
+    ul, li {
+        display: block;
+        justify-content: center;
+    }
+    .card1 {
+        padding-left: 0;
+    }
+}
+
+@media (450px < width < 830px) {
+    .card1 {
+        padding-left: 0;
+    }
+}
+
+/* About Section */
+#about {
+    scroll-behavior: smooth;
+}
+
+.headshot {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-width: 350px;
+    min-height: 350px;
+    border-radius: 100%;
+    padding: 50px;
+}
+
+.about-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 200px;
+    background-color: var(--white);
+}
+
+.flex-img {
+    flex: 1;
+    align-self: center
+}
+
+.text {
+    width: 300px;
+    flex: 2 300px;
+}
+
+p {
+    color: var(--black);
+    font-size: 16px;
+    padding: 15px 15px 30px 15px;
+    text-align: center;
+}
+
+.about-row, p {
+    align-items: center;
+}
+
+/* My Work Section */
+#featured-work {
+    scroll-behavior: smooth;
+}
+
+.mywork-row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--pink);
+}
+
+.mywork-row, h2 {
+    justify-content: space-around;
+    font-size: 45px;
+    text-decoration: underline;
+    font-weight: bolder;
+    color: var(--white);
+    padding: 15px 0 10px 0;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--pink);
+    padding: 0 20px 0 20px;
+}
+
+.image-grid div img {
+    width:100%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.image-grid .small-image {
+    flex: 1 1 150px;
+}
+
+.image-grid .large-image {
+    flex: 1 1 300px;
+}
+
+.large-image {
+    position: relative;
+    text-align: center;
+}
+
+.horiseon-text {
+    position: relative;
+    top: 50px;
+    color: var(--black);
+    background-color: var(--white);
+    padding: 5px;
+}
+
+h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.small-image {
+    position: relative;
+    text-align: center;
+    color: var(--white);
+}
+
+.placeholder-text {
+    position: relative;
+    top: 50px;
+    color: var(--black);
+    background-color: var(--white);
+    padding: 5px;
+    margin: 0 5px 0 5px;
+}
+
+.image-overlay {
+    opacity: 70%;
+    margin-top: 40px;
+}
+
+.image-overlay:hover {
+    opacity: 100%;
+}
+
+/* Contact Me Section */
+#contact-me {
+    scroll-behavior: smooth;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--dark-green);
+    align-content: center;
+    justify-content: space-around;
+    padding: 40px 0 50px 0;
+}
+
+.contact-details ul {
+    align-content: space-between;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: var(--white);
+    padding: 15px 0 15px 0;
+    color: var(--pink);
+} 
+
+Footer::before {
+    content: '🌸';
+    line-height: 20px;
+    align-content: center;
+}
